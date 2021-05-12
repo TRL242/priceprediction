@@ -39,7 +39,7 @@ x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 model = Sequential()
 
 #LSTM longshort
-model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1, 1])))
+model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
 model.add(Dropout(0.2))
 model.add(LSTM(units=50, return_sequences=True))
 model.add(Dropout(0.2))

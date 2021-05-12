@@ -25,6 +25,7 @@ scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1,1))
 
 #number of prediction days
 prediction_days = 60
+future_day = 30
 
 x_train, y_train = [], []
 

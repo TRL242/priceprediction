@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM
 from tensorflow.keras.models import Sequential
 
 #Fiancial prodcut being tracked
-financial_product = 'BTC'
+financial_product = 'ETH'
 #Currency the finacial product is to be tracked to
 against_currency = 'CAD'
 
@@ -92,5 +92,5 @@ real_data = np.reshape(real_data, (real_data.shape[0], real_data.shape[1], 1))
 
 prediction = model.predict(real_data)
 prediction = scaler.inverse_transform(prediction)
-print()
+print(prediction)
 
